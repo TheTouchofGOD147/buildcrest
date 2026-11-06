@@ -191,7 +191,7 @@ export default function ContactInquiryForm() {
           ? "Sending Inquiry..."
           : deliveryEnabled
             ? "Send Inquiry"
-            : "Send Inquiry - Coming Soon"}
+            : "Send Inquiry"}
       </button>
 
       <p className="text-xs leading-6 text-slate-500">

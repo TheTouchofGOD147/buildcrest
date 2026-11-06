@@ -29,7 +29,7 @@ export default async function ProjectDetails({
       >
         <div className="mx-auto w-full max-w-7xl">
           <span className="rounded-md bg-[#ffc20a] px-3 py-2 text-xs font-black text-[#061e38]">
-            DEMONSTRATION PROJECT
+            ONGOING PROJECT
           </span>
           <h1 className="mt-6 max-w-4xl text-4xl font-black md:text-6xl">
             {project.title}
@@ -80,7 +80,7 @@ export default async function ProjectDetails({
           <dl className="mt-7 space-y-5">
             <div><dt className="text-sm text-slate-300">Location</dt><dd className="font-bold">{project.city}, {project.state}</dd></div>
             <div><dt className="text-sm text-slate-300">Construction Type</dt><dd className="font-bold">{project.type}</dd></div>
-            <div><dt className="text-sm text-slate-300">Project Status</dt><dd className="font-bold text-[#ffc20a]">Demonstration</dd></div>
+            <div><dt className="text-sm text-slate-300">Project Status</dt><dd className="font-bold text-[#ffc20a]">In Progress</dd></div>
             <div><dt className="text-sm text-slate-300">Hiring Status</dt><dd className="font-bold">Not verified</dd></div>
           </dl>
           <Link

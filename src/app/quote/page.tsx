@@ -622,7 +622,7 @@ export default function QuotePage() {
                   ? "Submitting Quote Request..."
                   : quoteEnabled
                     ? "Submit Quote Request"
-                    : "Submit Quote Request - Coming Soon"}
+                    : "Submit Quote Request"}
               </button>
               <p className="text-xs leading-6 text-slate-500">
                 Please do not include passwords, financial account

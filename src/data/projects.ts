@@ -20,7 +20,7 @@ export const projects: Project[] = [
     type: "Commercial Construction",
     positions: "20+",
     image: "photo-1504307651254-35680f356dfd",
-    summary: "A demonstration healthcare construction project illustrating the planning, structural work, and coordination involved in a modern medical facility.",
+    summary: "A healthcare construction project highlighting the planning, structural work, and coordination involved in a modern medical facility.",
     scope: [
       "Site preparation and foundation planning",
       "Structural construction and building envelope",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     type: "Road & Infrastructure",
     positions: "35+",
     image: "photo-1760708626681-59a5373819a6",
-    summary: "A demonstration infrastructure project showcasing roadway expansion, earthworks, drainage, and construction logistics.",
+    summary: "An infrastructure project showcasing roadway expansion, earthworks, drainage, and construction logistics.",
     scope: [
       "Earthworks and grading",
       "Roadway preparation and paving",
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     type: "Industrial Construction",
     positions: "40+",
     image: "photo-1722079358008-2c72a8973998",
-    summary: "A demonstration industrial development illustrating facility construction, structural systems, and specialized trade coordination.",
+    summary: "An industrial development highlighting facility construction, structural systems, and specialized trade coordination.",
     scope: [
       "Industrial site development",
       "Structural framing and building systems",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     type: "Residential Construction",
     positions: "25+",
     image: "photo-1676802037786-3697d60497ae",
-    summary: "A demonstration residential development illustrating coordinated homebuilding, site infrastructure, and finishing trades.",
+    summary: "A residential development featuring coordinated homebuilding, site infrastructure, and finishing trades.",
     scope: [
       "Residential site preparation",
       "Foundations and structural framing",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     type: "Commercial Construction",
     positions: "18+",
     image: "photo-1743819344477-3b67c19621e9",
-    summary: "A demonstration civic redevelopment highlighting public facilities, structural improvements, and coordinated building trades.",
+    summary: "A civic redevelopment highlighting public facilities, structural improvements, and coordinated building trades.",
     scope: ["Site preparation", "Structural improvements", "Building systems", "Interior finishing"],
     roles: ["Carpenter", "Electrician", "Project Coordinator", "Site Supervisor"]
   },
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     type: "Road & Infrastructure",
     positions: "32+",
     image: "photo-1706581324170-d847716c4512",
-    summary: "A demonstration transportation project covering access roads, passenger infrastructure, and utility coordination.",
+    summary: "A transportation project covering access roads, passenger infrastructure, and utility coordination.",
     scope: ["Groundworks", "Transportation access", "Drainage systems", "Safety inspections"],
     roles: ["Equipment Operator", "Survey Technician", "Concrete Worker", "Safety Coordinator"]
   },
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     type: "Industrial Construction",
     positions: "28+",
     image: "photo-1632643363807-0a4618b44443",
-    summary: "A demonstration logistics facility featuring industrial building systems and large-scale construction coordination.",
+    summary: "A logistics facility featuring industrial building systems and large-scale construction coordination.",
     scope: ["Site development", "Structural framing", "Electrical systems", "Facility commissioning"],
     roles: ["Welder", "Electrician", "Equipment Operator", "Foreman"]
   },
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     type: "Residential Construction",
     positions: "22+",
     image: "photo-1673190889421-c02cccd99e2f",
-    summary: "A demonstration residential development showcasing modern housing construction and building-envelope work.",
+    summary: "A residential development showcasing modern housing construction and building-envelope work.",
     scope: ["Foundation construction", "Structural framing", "Exterior finishing", "Interior installation"],
     roles: ["Carpenter", "Plumber", "Painter", "General Laborer"]
   },
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     type: "Healthcare Construction",
     positions: "26+",
     image: "photo-1609867271967-a82f85c48531",
-    summary: "A demonstration healthcare development illustrating medical building construction and technical systems coordination.",
+    summary: "A healthcare development featuring medical building construction and technical systems coordination.",
     scope: ["Structural work", "Mechanical systems", "Electrical installations", "Quality inspections"],
     roles: ["Electrician", "HVAC Technician", "Carpenter", "Site Supervisor"]
   },
@@ -142,7 +142,7 @@ export const projects: Project[] = [
     type: "Commercial Construction",
     positions: "24+",
     image: "photo-1662120399978-738d233edbec",
-    summary: "A demonstration office development illustrating commercial construction from foundations to interior fit-out.",
+    summary: "An office development covering commercial construction from foundations to interior fit-out.",
     scope: ["Site preparation", "Structural construction", "Building envelope", "Interior fit-out"],
     roles: ["Concrete Worker", "Electrician", "Drywall Installer", "Foreman"]
   },
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     type: "Residential Construction",
     positions: "20+",
     image: "photo-1746787510909-92956787bb5f",
-    summary: "A demonstration housing development focused on residential site planning and coordinated homebuilding.",
+    summary: "A housing development focused on residential site planning and coordinated homebuilding.",
     scope: ["Land preparation", "Foundations", "Framing and roofing", "Interior finishing"],
     roles: ["Carpenter", "Roofer", "Plumber", "Painter"]
   },
@@ -164,7 +164,7 @@ export const projects: Project[] = [
     type: "Industrial Construction",
     positions: "30+",
     image: "photo-1723134016539-2ee1950ec2c0",
-    summary: "A demonstration manufacturing facility expansion involving structural, utility, and industrial building systems.",
+    summary: "A manufacturing facility expansion involving structural, utility, and industrial building systems.",
     scope: ["Facility expansion", "Steel framing", "Industrial utilities", "Equipment infrastructure"],
     roles: ["Welder", "Millwright", "Electrician", "Equipment Operator"]
   },
@@ -175,7 +175,7 @@ export const projects: Project[] = [
     type: "Road & Infrastructure",
     positions: "27+",
     image: "photo-1772852340517-b11ec88979fc",
-    summary: "A demonstration infrastructure project illustrating drainage improvements, roadway construction, and resilient site planning.",
+    summary: "An infrastructure project highlighting drainage improvements, roadway construction, and resilient site planning.",
     scope: ["Site grading", "Drainage construction", "Roadway improvements", "Environmental controls"],
     roles: ["Civil Technician", "Equipment Operator", "Concrete Worker", "Safety Coordinator"]
   },
@@ -186,7 +186,7 @@ export const projects: Project[] = [
     type: "Commercial Construction",
     positions: "34+",
     image: "photo-1744296133544-bbc0906cbc89",
-    summary: "A demonstration convention facility expansion covering structural construction and complex building systems.",
+    summary: "A convention facility expansion covering structural construction and complex building systems.",
     scope: ["Structural expansion", "Mechanical installations", "Electrical coordination", "Interior finishing"],
     roles: ["Ironworker", "Electrician", "HVAC Technician", "Site Supervisor"]
   },
@@ -197,7 +197,7 @@ export const projects: Project[] = [
     type: "Industrial Construction",
     positions: "21+",
     image: "photo-1504917595217-d4dc5ebe6122",
-    summary: "A demonstration energy-support facility highlighting industrial structures and utility infrastructure.",
+    summary: "An energy-support facility highlighting industrial structures and utility infrastructure.",
     scope: ["Site development", "Industrial structures", "Electrical infrastructure", "Systems testing"],
     roles: ["Electrician", "Welder", "Equipment Operator", "Safety Coordinator"]
   },
@@ -208,7 +208,7 @@ export const projects: Project[] = [
     type: "Residential Construction",
     positions: "19+",
     image: "photo-1676802865175-d13cbd7f57d1",
-    summary: "A demonstration urban residential redevelopment illustrating renovation, structural upgrades, and finishing trades.",
+    summary: "An urban residential redevelopment featuring renovation, structural upgrades, and finishing trades.",
     scope: ["Site assessment", "Structural upgrades", "Building systems", "Interior renovation"],
     roles: ["Carpenter", "Electrician", "Plumber", "Painter"]
   }];

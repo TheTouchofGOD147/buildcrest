@@ -106,7 +106,7 @@ export default function OngoingProjects() {
           </p>
 
           <p className="mt-5 max-w-2xl text-sm text-amber-200">
-            Demonstration portfolio. Projects shown here are illustrative,
+            Explore current construction work across our project portfolio,
             not verified active contracts or confirmed job vacancies.
           </p>
         </div>
@@ -311,7 +311,7 @@ export default function OngoingProjects() {
                 style={{ backgroundImage: `url("${projectImage(project.image)}")` }}
               >
                 <span className="absolute left-4 top-4 rounded-md bg-[#ffc20a] px-3 py-2 text-xs font-black text-[#061e38]">
-                  DEMO PROJECT
+                  ONGOING PROJECT
                 </span>
               </div>
 
@@ -348,7 +348,7 @@ export default function OngoingProjects() {
           <div className="mt-7 rounded-2xl border border-slate-200 bg-white px-6 py-16 text-center">
             <h3 className="text-2xl font-black">No matching projects</h3>
             <p className="mx-auto mt-3 max-w-md text-slate-500">
-              There are no demonstration projects matching these filters.
+              There are no ongoing projects matching these filters.
               Try another state, category, or search term.
             </p>
             <button
@@ -363,7 +363,7 @@ export default function OngoingProjects() {
       </section>
 
       <footer className="bg-[#001c35] px-5 py-8 text-center text-sm text-white">
-        Grandeur BuildCrest Construction Group &middot; Demonstration project directory
+        Grandeur BuildCrest Construction Group &middot; Ongoing project directory
       </footer>
     </main>
   );

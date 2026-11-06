@@ -91,7 +91,7 @@ export default async function CareerDetailPage({
                 title="The application portal is being prepared."
                 className="inline-flex cursor-not-allowed rounded-lg bg-[#ffc20a] px-6 py-3 font-black text-[#061e38] opacity-60"
               >
-                Apply Now - Coming Soon
+                Apply Now
               </button>
             )}
 
