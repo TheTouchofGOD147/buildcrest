@@ -1,69 +1,218 @@
-import Image from "next/image";
+"use client";
+
+import BuildCrestHeader from "@/components/BuildCrestHeader";
+
+import Link from "next/link";
+
+const services = [
+  {
+    title: "Commercial Construction",
+    description: "Purpose-built spaces for businesses, institutions, and communities.",
+    image: "photo-1486406146926-c627a92ad1ab",
+    number: "01"
+  },
+  {
+    title: "Residential Construction",
+    description: "Thoughtfully planned homes and residential developments.",
+    image: "photo-1600585154340-be6161a56a0c",
+    number: "02"
+  },
+  {
+    title: "Civil & Infrastructure",
+    description: "Roadways, site infrastructure, and essential public works.",
+    image: "photo-1519003722824-194d4455a60c",
+    number: "03"
+  }
+];
+
+function photo(id: string, width = 900) {
+  return `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=85`;
+}
 
 export default function Home() {
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="bc-home">
+      <BuildCrestHeader />
+
+      <section className="bc-hero">
+        <div className="bc-hero-overlay">
+          <div className="bc-hero-content">
+            <p className="bc-eyebrow">
+              BUILDCREST CONSTRUCTION GROUP
+            </p>
+
+            <h1>
+              Building Your Vision
+              <span>With Precision.</span>
+            </h1>
+
+            <p className="bc-hero-description">
+              Construction solutions for commercial, residential,
+              and infrastructure projects. Explore our capabilities
+              and discover what we can build together.
+            </p>
+
+            <div className="bc-hero-actions">
+              <Link href="/quote" className="bc-button bc-button-primary">
+                Request a Quote <span aria-hidden="true">→</span>
+              </Link>
+
+              <Link href="/services" className="bc-button bc-button-outline">
+                Explore Services <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="bc-intro">
+        <div className="bc-container bc-intro-grid">
+          <div>
+            <p className="bc-section-kicker">WHO WE ARE</p>
+            <h2>Built on Planning. Driven by Quality.</h2>
+          </div>
+
+          <div className="bc-intro-copy">
+            <p>
+              Grandeur BuildCrest Construction Group presents a broad range of
+              construction capabilities, from new building projects to
+              infrastructure and site development.
+            </p>
+            <Link href="/about" className="bc-text-link">
+              Learn About Grandeur BuildCrest <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="bc-services">
+        <div className="bc-container">
+          <div className="bc-section-heading">
+            <div>
+              <p className="bc-section-kicker">OUR EXPERTISE</p>
+              <h2>Construction Services</h2>
+              <p>
+                Explore the building solutions and construction
+                disciplines represented across our services.
+              </p>
+            </div>
+
+            <Link href="/services" className="bc-text-link">
+              View All Services <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="bc-service-grid">
+            {services.map(service => (
+              <Link
+                href="/services"
+                className="bc-service-card"
+                key={service.title}
+              >
+                <div
+                  className="bc-service-photo"
+                  style={{
+                    backgroundImage: `url("${photo(service.image)}")`
+                  }}
+                  role="img"
+                  aria-label={`${service.title} illustrative photograph`}
+                >
+                  <span className="bc-service-number">
+                    {service.number}
+                  </span>
+                </div>
+
+                <div className="bc-service-content">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <span className="bc-service-explore">
+                    Explore Service <span aria-hidden="true">→</span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bc-discover">
+        <div className="bc-container bc-discover-inner">
+          <div>
+            <p className="bc-section-kicker">EXPLORE BUILDCREST</p>
+            <h2>Discover Our Projects and Opportunities</h2>
+            <p>
+              Browse our project portfolio, explore illustrative
+              ongoing developments, or visit the Careers page.
+            </p>
+          </div>
+
+          <div className="bc-discover-actions">
+            <Link href="/projects" className="bc-button bc-button-primary">
+              View Projects <span aria-hidden="true">→</span>
+            </Link>
+            <Link href="/ongoing-projects" className="bc-button bc-button-outline">
+              Ongoing Projects <span aria-hidden="true">→</span>
+            </Link>
+            <Link href="/careers" className="bc-button bc-button-outline">
+              Explore Careers <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bc-cta">
+        <div className="bc-container bc-cta-inner">
+          <div>
+            <p className="bc-section-kicker">START YOUR PROJECT</p>
+            <h2>Let&apos;s Build Something Great.</h2>
+            <p>
+              Tell us about your construction plans and the
+              services you&apos;re looking for.
+            </p>
+          </div>
+
+          <Link href="/quote" className="bc-button bc-button-primary">
+            Request a Construction Quote <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+
+      <footer className="bc-footer">
+        <div className="bc-container bc-footer-grid">
+          <div className="bc-footer-about">
+            <strong>Grandeur BuildCrest</strong>
+            <span>Construction Group</span>
+            <p>
+              Building ideas into lasting spaces and infrastructure.
+            </p>
+          </div>
+
+          <div>
+            <h3>Company</h3>
+            <Link href="/about">About Us</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
+
+          <div>
+            <h3>Projects</h3>
+            <Link href="/projects">Project Portfolio</Link>
+            <Link href="/ongoing-projects">Ongoing Projects</Link>
+          </div>
+
+          <div>
+            <h3>Opportunities</h3>
+            <Link href="/careers">Careers</Link>
+            <Link href="/quote">Request a Quote</Link>
+          </div>
+        </div>
+
+        <div className="bc-container bc-footer-bottom">
+          <span>© {2026} Grandeur BuildCrest Construction Group</span>
+          <span>Construction · Projects · Careers</span>
+        </div>
+      </footer>
+    </main>
   );
 }
