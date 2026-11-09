@@ -16,8 +16,8 @@ export default function Page() {
     <main className="min-h-screen bg-slate-50 text-slate-950">
       <BuildCrestHeader />
 
-      <section className="bg-[#061e38] px-6 py-20 text-center text-white">
-        <p className="mb-4 font-bold text-[#ffc20a]">
+      <section className="bg-[#263238] px-6 py-20 text-center text-white">
+        <p className="mb-4 font-bold text-[#d0a12a]">
           BUILDCREST CONSTRUCTION GROUP
         </p>
 
@@ -35,9 +35,9 @@ export default function Page() {
           {items.map((item) => (
             <article
               key={item}
-              className="rounded-xl border border-slate-200 bg-white p-8 shadow-sm"
+              className="rounded-none border border-slate-200 bg-white p-8"
             >
-              <div className="mb-5 h-2 w-14 rounded bg-[#ffc20a]" />
+              <div className="mb-5 h-2 w-14 rounded bg-[#e3aa19]" />
 
               <h2 className="text-xl font-extrabold">
                 {item}
@@ -52,7 +52,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-[#061e38] px-6 py-12 text-center text-white">
+      <section className="bg-[#263238] px-6 py-12 text-center text-white">
         <h2 className="text-2xl font-black">
           Ready to Get Started?
         </h2>
@@ -64,21 +64,21 @@ export default function Page() {
         <div className="mt-7 flex flex-wrap justify-center gap-4">
           <Link
             href="/quote"
-            className="rounded-lg bg-[#ffc20a] px-6 py-3 font-bold text-[#061e38]"
+            className="rounded-none bg-[#e3aa19] px-6 py-3 font-bold text-[#252b30]"
           >
             Request a Quote
           </Link>
 
           <Link
             href="/careers"
-            className="rounded-lg border border-white px-6 py-3 font-bold"
+            className="rounded-none border border-white px-6 py-3 font-bold"
           >
             Explore Careers
           </Link>
         </div>
       </section>
 
-      <footer className="bg-[#001426] px-6 py-7 text-center text-sm text-white">
+      <footer className="bg-[#111b21] px-6 py-7 text-center text-sm text-white">
         Grandeur BuildCrest Construction Group
       </footer>
     </main>

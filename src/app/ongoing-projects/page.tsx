@@ -87,17 +87,17 @@ export default function OngoingProjects() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f3f6fa] text-[#061e38]">
+    <main className="min-h-screen bg-[#f4f4f1] text-[#252b30]">
       <BuildCrestHeader />
 
-      <section className="bg-[#061e38] px-5 py-16 text-white md:py-20">
+      <section className="bg-[#263238] px-5 py-16 text-white md:py-20">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-xs font-black tracking-[0.22em] text-[#ffc20a]">
+          <p className="mb-4 text-xs font-black tracking-[0.22em] text-[#d0a12a]">
             BUILDCREST PROJECT DIRECTORY
           </p>
 
           <h1 className="max-w-4xl text-4xl font-black leading-tight md:text-6xl">
-            Explore Our <span className="text-[#ffc20a]">Ongoing Projects</span>
+            Explore Our <span className="text-[#d0a12a]">Ongoing Projects</span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-slate-200 md:text-lg">
@@ -113,10 +113,10 @@ export default function OngoingProjects() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-10 md:py-14">
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-200/60 md:p-7">
+        <div className="rounded-none border border-slate-200 bg-white p-5 md:p-7">
           <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p className="text-xs font-black tracking-widest text-amber-700">
+              <p className="text-xs font-black tracking-widest text-[#806317]">
                 PROJECT FINDER
               </p>
               <h2 className="mt-2 text-2xl font-black md:text-3xl">
@@ -131,7 +131,7 @@ export default function OngoingProjects() {
               <button
                 type="button"
                 onClick={clearFilters}
-                className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-bold text-[#061e38] transition hover:bg-slate-100"
+                className="rounded-none border border-slate-200 px-4 py-2 text-sm font-bold text-[#252b30] transition hover:bg-slate-100"
               >
                 Clear Filters
               </button>
@@ -144,7 +144,7 @@ export default function OngoingProjects() {
                 Search Projects
               </span>
 
-              <span className="flex min-h-13 items-center gap-3 rounded-xl border border-slate-300 bg-[#f9fbfd] px-4 focus-within:border-amber-500 focus-within:ring-2 focus-within:ring-amber-100">
+              <span className="flex min-h-13 items-center gap-3 rounded-none border border-slate-300 bg-white px-4 focus-within:border-amber-500 focus-within:ring-2 focus-within:ring-amber-100">
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0 text-slate-400">
                   <circle cx="11" cy="11" r="7" />
                   <path d="m16 16 5 5" />
@@ -177,7 +177,7 @@ export default function OngoingProjects() {
                     requestAnimationFrame(() => stateInputRef.current?.focus());
                   }
                 }}
-                className="flex min-h-13 w-full items-center justify-between gap-3 rounded-xl border border-slate-300 bg-[#f9fbfd] px-4 text-left text-sm font-semibold hover:border-amber-500"
+                className="flex min-h-13 w-full items-center justify-between gap-3 rounded-none border border-slate-300 bg-white px-4 text-left text-sm font-semibold hover:border-slate-500"
               >
                 <span className="truncate">{selectedStateName}</span>
                 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0 text-slate-500">
@@ -186,7 +186,7 @@ export default function OngoingProjects() {
               </button>
 
               {stateOpen && (
-                <div className="absolute left-0 right-0 top-full z-40 mt-2 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl">
+                <div className="absolute left-0 right-0 top-full z-40 mt-2 overflow-hidden rounded-none border border-slate-200 bg-white">
                   <div className="border-b border-slate-100 p-3">
                     <input
                       ref={stateInputRef}
@@ -195,7 +195,7 @@ export default function OngoingProjects() {
                       value={stateSearch}
                       onChange={event => setStateSearch(event.target.value)}
                       placeholder="Type a state name..."
-                      className="w-full rounded-lg border border-slate-300 px-3 py-3 text-sm outline-none focus:border-amber-500"
+                      className="w-full rounded-none border border-slate-300 px-3 py-3 text-sm outline-none focus:border-slate-500"
                     />
                   </div>
 
@@ -211,7 +211,7 @@ export default function OngoingProjects() {
                         role="option"
                         aria-selected={!state}
                         onClick={() => chooseState("")}
-                        className="block w-full rounded-lg px-3 py-3 text-left text-sm font-bold hover:bg-amber-50"
+                        className="block w-full rounded-none px-3 py-3 text-left text-sm font-bold hover:bg-slate-100"
                       >
                         All States
                       </button>
@@ -224,7 +224,7 @@ export default function OngoingProjects() {
                         role="option"
                         aria-selected={state === code}
                         onClick={() => chooseState(code)}
-                        className={`flex w-full items-center justify-between rounded-lg px-3 py-3 text-left text-sm hover:bg-amber-50 ${
+                        className={`flex w-full items-center justify-between rounded-none px-3 py-3 text-left text-sm hover:bg-slate-100 ${
                           state === code ? "bg-amber-50 font-black" : "font-medium"
                         }`}
                       >
@@ -252,7 +252,7 @@ export default function OngoingProjects() {
                 <select
                   value={category}
                   onChange={event => setCategory(event.target.value)}
-                  className="min-h-13 w-full appearance-none rounded-xl border border-slate-300 bg-[#f9fbfd] px-4 py-3 pr-10 text-sm font-semibold outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-100"
+                  className="min-h-13 w-full appearance-none rounded-none border border-slate-300 bg-white px-4 py-3 pr-10 text-sm font-semibold outline-none focus:border-slate-500 focus:ring-2 focus:ring-slate-200"
                 >
                   <option value="">All Categories</option>
                   {categories.map(type => (
@@ -269,15 +269,15 @@ export default function OngoingProjects() {
 
           <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-5">
             <p aria-live="polite" className="text-sm font-semibold text-slate-600">
-              Showing <strong className="text-[#061e38]">{filtered.length}</strong> of{" "}
-              <strong className="text-[#061e38]">{projects.length}</strong> project examples
+              Showing <strong className="text-[#252b30]">{filtered.length}</strong> of{" "}
+              <strong className="text-[#252b30]">{projects.length}</strong> project examples
             </p>
 
             {filtersActive && (
               <button
                 type="button"
                 onClick={clearFilters}
-                className="text-sm font-bold text-amber-800 underline underline-offset-4"
+                className="text-sm font-bold text-[#6d571e] underline underline-offset-4"
               >
                 Reset Search
               </button>
@@ -287,7 +287,7 @@ export default function OngoingProjects() {
 
         <div className="mb-7 mt-12 flex flex-wrap items-center justify-between gap-3">
           <div>
-            <p className="text-xs font-black tracking-widest text-amber-700">
+            <p className="text-xs font-black tracking-widest text-[#806317]">
               EXPLORE PROJECTS
             </p>
             <h2 className="mt-2 text-3xl font-black">Project Directory</h2>
@@ -302,7 +302,7 @@ export default function OngoingProjects() {
           {filtered.map(project => (
             <article
               key={project.slug}
-              className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md shadow-slate-200/70 transition hover:-translate-y-1 hover:shadow-xl"
+              className="flex flex-col overflow-hidden rounded-none bg-white transition"
             >
               <div
                 role="img"
@@ -310,7 +310,7 @@ export default function OngoingProjects() {
                 className="relative h-56 bg-cover bg-center"
                 style={{ backgroundImage: `url("${projectImage(project.image)}")` }}
               >
-                <span className="absolute left-4 top-4 rounded-md bg-[#ffc20a] px-3 py-2 text-xs font-black text-[#061e38]">
+                <span className="absolute left-4 top-4 rounded-none bg-[#e3aa19] px-3 py-2 text-xs font-black text-[#252b30]">
                   ONGOING PROJECT
                 </span>
               </div>
@@ -322,7 +322,7 @@ export default function OngoingProjects() {
 
                 <h3 className="mt-2 text-2xl font-black">{project.title}</h3>
 
-                <p className="mt-2 text-sm font-bold text-amber-700">
+                <p className="mt-2 text-sm font-bold text-[#806317]">
                   {project.type}
                 </p>
 
@@ -333,7 +333,7 @@ export default function OngoingProjects() {
                 <div className="mt-6 border-t border-slate-200 pt-5">
                   <Link
                     href={`/ongoing-projects/${project.slug}`}
-                    className="inline-flex items-center gap-2 rounded-lg bg-[#ffc20a] px-5 py-3 text-sm font-black text-[#061e38] hover:bg-amber-400"
+                    className="inline-flex items-center gap-2 rounded-none bg-[#e3aa19] px-5 py-3 text-sm font-black text-[#252b30] hover:bg-[#c99417]"
                   >
                     View Project Details
                     <span aria-hidden="true">&rarr;</span>
@@ -345,7 +345,7 @@ export default function OngoingProjects() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="mt-7 rounded-2xl border border-slate-200 bg-white px-6 py-16 text-center">
+          <div className="mt-7 rounded-none border border-slate-200 bg-white px-6 py-16 text-center">
             <h3 className="text-2xl font-black">No matching projects</h3>
             <p className="mx-auto mt-3 max-w-md text-slate-500">
               There are no ongoing projects matching these filters.
@@ -354,7 +354,7 @@ export default function OngoingProjects() {
             <button
               type="button"
               onClick={clearFilters}
-              className="mt-6 rounded-lg bg-[#ffc20a] px-6 py-3 font-black text-[#061e38]"
+              className="mt-6 rounded-none bg-[#e3aa19] px-6 py-3 font-black text-[#252b30]"
             >
               Clear All Filters
             </button>
@@ -362,7 +362,7 @@ export default function OngoingProjects() {
         )}
       </section>
 
-      <footer className="bg-[#001c35] px-5 py-8 text-center text-sm text-white">
+      <footer className="bg-[#111b21] px-5 py-8 text-center text-sm text-white">
         Grandeur BuildCrest Construction Group &middot; Ongoing project directory
       </footer>
     </main>

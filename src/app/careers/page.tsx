@@ -25,16 +25,16 @@ export default function CareersPage() {
   }, [search, category]);
 
   return (
-    <main className="min-h-screen bg-[#f4f6f9] text-[#061e38]">
+    <main className="min-h-screen bg-[#f4f4f1] text-[#252b30]">
       <BuildCrestHeader />
 
-      <section className="bg-[#061e38] px-5 py-20 text-white">
+      <section className="bg-[#263238] px-5 py-20 text-white">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-xs font-black tracking-[0.2em] text-[#ffc20a]">
+          <p className="mb-4 text-xs font-black tracking-[0.2em] text-[#d0a12a]">
             BUILD YOUR FUTURE
           </p>
           <h1 className="max-w-4xl text-4xl font-black md:text-6xl">
-            Explore Construction <span className="text-[#ffc20a]">Careers</span>
+            Explore Construction <span className="text-[#d0a12a]">Careers</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
             Discover career paths across construction management,
@@ -49,7 +49,7 @@ export default function CareersPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-14">
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div className="rounded-none border border-slate-200 bg-white p-6">
           <h2 className="text-2xl font-black">Find Your Career Path</h2>
           <p className="mt-2 text-sm text-slate-500">
             Search by role or filter by career category.
@@ -63,7 +63,7 @@ export default function CareersPage() {
                 value={search}
                 onChange={event => setSearch(event.target.value)}
                 placeholder="Search job titles or skills"
-                className="w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-4 outline-none focus:border-amber-500"
+                className="w-full rounded-none border border-slate-300 bg-slate-50 px-4 py-4 outline-none focus:border-slate-500"
               />
             </label>
 
@@ -72,7 +72,7 @@ export default function CareersPage() {
               <select
                 value={category}
                 onChange={event => setCategory(event.target.value)}
-                className="w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-4 outline-none focus:border-amber-500"
+                className="w-full rounded-none border border-slate-300 bg-slate-50 px-4 py-4 outline-none focus:border-slate-500"
               >
                 {careerCategories.map(item => (
                   <option key={item} value={item}>{item}</option>
@@ -90,9 +90,9 @@ export default function CareersPage() {
           {filtered.map(career => (
             <article
               key={career.slug}
-              className="flex flex-col rounded-2xl bg-white p-7 shadow-md shadow-slate-200/60"
+              className="flex flex-col rounded-none bg-white p-7"
             >
-              <p className="text-xs font-black tracking-widest text-amber-700">
+              <p className="text-xs font-black tracking-widest text-[#806317]">
                 {career.category.toUpperCase()}
               </p>
               <h3 className="mt-4 text-2xl font-black">{career.title}</h3>
@@ -101,7 +101,7 @@ export default function CareersPage() {
               </p>
               <Link
                 href={`/careers/${career.slug}`}
-                className="mt-7 inline-flex w-fit rounded-lg bg-[#ffc20a] px-5 py-3 text-sm font-black hover:bg-amber-400"
+                className="mt-7 inline-flex w-fit rounded-none bg-[#e3aa19] px-5 py-3 text-sm font-black hover:bg-[#c99417]"
               >
                 View Career Details &rarr;
               </Link>
@@ -110,13 +110,13 @@ export default function CareersPage() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="mt-8 rounded-xl bg-white p-12 text-center">
+          <div className="mt-8 rounded-none bg-white p-12 text-center">
             <h3 className="text-xl font-black">No matching career paths</h3>
             <p className="mt-2 text-slate-500">Try another search or category.</p>
             <button
               type="button"
               onClick={() => { setSearch(""); setCategory("All Careers"); }}
-              className="mt-5 rounded-lg bg-[#ffc20a] px-5 py-3 font-black"
+              className="mt-5 rounded-none bg-[#e3aa19] px-5 py-3 font-black"
             >
               Clear Filters
             </button>
@@ -124,11 +124,11 @@ export default function CareersPage() {
         )}
       </section>
 
-      <footer className="bg-[#061e38] px-5 py-14 text-white">
+      <footer className="bg-[#263238] px-5 py-14 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <h2 className="text-2xl font-black">
-              <span className="text-[#ffc20a]">Build</span>Crest
+              <span className="text-[#d0a12a]">Build</span>Crest
             </h2>
             <p className="mt-2 text-sm font-bold text-slate-300">
               Construction Group
@@ -166,7 +166,7 @@ export default function CareersPage() {
             </p>
             <Link
               href="/contact"
-              className="mt-5 inline-flex rounded-lg bg-[#ffc20a] px-5 py-3 text-sm font-black text-[#061e38]"
+              className="mt-5 inline-flex rounded-none bg-[#e3aa19] px-5 py-3 text-sm font-black text-[#252b30]"
             >
               Contact Grandeur BuildCrest
             </Link>

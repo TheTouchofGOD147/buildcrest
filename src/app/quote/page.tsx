@@ -5,7 +5,7 @@ import { useRef, useState, type FormEvent } from "react";
 import BuildCrestHeader from "@/components/BuildCrestHeader";
 
 const inputClass =
-  "mt-2 w-full rounded-lg border border-slate-300 bg-white px-4 py-3.5 text-sm text-[#061e38] outline-none transition focus:border-[#c49300] focus:ring-2 focus:ring-[#ffc20a]/30";
+  "mt-2 w-full rounded-none border border-slate-300 bg-white px-4 py-3.5 text-sm text-[#252b30] outline-none transition focus:border-[#c49300] focus:ring-2 focus:ring-[#ffc20a]/30";
 
 const allowedTypes = [
   "application/pdf",
@@ -139,11 +139,11 @@ export default function QuotePage() {
   }
 
   return (
-    <main className="min-h-screen overflow-x-clip bg-white text-[#061e38]">
+    <main className="min-h-screen overflow-x-clip bg-white text-[#252b30]">
       <BuildCrestHeader />
 
       <section
-        className="flex min-h-[430px] items-center bg-[#061e38] text-white md:min-h-[510px]"
+        className="flex min-h-[430px] items-center bg-[#263238] text-white md:min-h-[510px]"
         style={{
           backgroundImage:
             'linear-gradient(90deg, rgba(0,20,38,.97), rgba(0,27,51,.74)), url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1900&q=85")',
@@ -152,15 +152,15 @@ export default function QuotePage() {
         }}
       >
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-8">
-          <div className="mb-7 h-1 w-16 bg-[#ffc20a]" />
+          <div className="mb-7 h-1 w-16 bg-[#e3aa19]" />
 
-          <p className="mb-5 text-xs font-black tracking-[0.22em] text-[#ffc20a]">
+          <p className="mb-5 text-xs font-black tracking-[0.22em] text-[#d0a12a]">
             START YOUR PROJECT
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
+          <h1 className="max-w-4xl text-4xl font-extrabold leading-tight tracking-tight md:text-6xl">
             Request a
-            <span className="block text-[#ffc20a]">Construction Quote.</span>
+            <span className="block text-[#d0a12a]">Construction Quote.</span>
           </h1>
 
           <p className="mt-7 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
@@ -170,10 +170,10 @@ export default function QuotePage() {
         </div>
       </section>
 
-      <section className="bg-[#f3f6f9] px-6 py-20 md:px-8 md:py-24">
+      <section className="bg-[#f4f4f1] px-6 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-3xl">
-            <p className="mb-4 text-xs font-black tracking-[0.2em] text-[#a77b00]">
+            <p className="mb-4 text-xs font-black tracking-[0.2em] text-[#806317]">
               OUR QUOTATION PROCESS
             </p>
 
@@ -191,9 +191,9 @@ export default function QuotePage() {
             {steps.map(step => (
               <article
                 key={step.number}
-                className="rounded-xl border border-slate-200 bg-white p-8 shadow-sm"
+                className="rounded-none border border-slate-200 bg-white p-8"
               >
-                <span className="text-4xl font-black text-[#d9a400]">
+                <span className="text-4xl font-black text-[#a47b16]">
                   {step.number}
                 </span>
 
@@ -213,7 +213,7 @@ export default function QuotePage() {
       <section className="px-6 py-20 md:px-8 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
           <aside>
-            <p className="mb-4 text-xs font-black tracking-[0.2em] text-[#a77b00]">
+            <p className="mb-4 text-xs font-black tracking-[0.2em] text-[#806317]">
               PROJECT INQUIRY
             </p>
 
@@ -221,7 +221,7 @@ export default function QuotePage() {
               Every Great Project Starts With a Plan.
             </h2>
 
-            <div className="mt-7 h-1 w-16 bg-[#ffc20a]" />
+            <div className="mt-7 h-1 w-16 bg-[#e3aa19]" />
 
             <p className="mt-8 leading-8 text-slate-600">
               Share as much information as you currently have.
@@ -229,8 +229,8 @@ export default function QuotePage() {
               help communicate your construction requirements.
             </p>
 
-            <div className="mt-10 rounded-xl bg-[#061e38] p-8 text-white">
-              <p className="text-xs font-black tracking-[0.2em] text-[#ffc20a]">
+            <div className="mt-10 rounded-none bg-[#263238] p-8 text-white">
+              <p className="text-xs font-black tracking-[0.2em] text-[#d0a12a]">
                 PROJECT TYPES
               </p>
 
@@ -244,13 +244,13 @@ export default function QuotePage() {
 
               <Link
                 href="/services"
-                className="mt-8 inline-block text-sm font-black text-[#ffc20a]"
+                className="mt-8 inline-block text-sm font-black text-[#d0a12a]"
               >
                 Explore Our Services →
               </Link>
             </div>
 
-            <div className="mt-8 rounded-xl border border-slate-200 bg-[#f3f6f9] p-7">
+            <div className="mt-8 rounded-none border border-slate-200 bg-[#f4f4f1] p-7">
               <h3 className="text-lg font-black">
                 Need General Assistance?
               </h3>
@@ -262,15 +262,15 @@ export default function QuotePage() {
 
               <Link
                 href="/contact"
-                className="mt-5 inline-block text-sm font-black text-[#a77b00]"
+                className="mt-5 inline-block text-sm font-black text-[#806317]"
               >
                 Contact Grandeur BuildCrest →
               </Link>
             </div>
           </aside>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/60 sm:p-9 md:p-11">
-            <p className="text-xs font-black tracking-[0.2em] text-[#a77b00]">
+          <div className="rounded-none border border-slate-200 bg-white p-6 sm:p-9 md:p-11">
+            <p className="text-xs font-black tracking-[0.2em] text-[#806317]">
               CONSTRUCTION QUOTATION
             </p>
 
@@ -511,9 +511,9 @@ export default function QuotePage() {
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
-                  className="w-full rounded-xl border-2 border-dashed border-[#b9c5d2] bg-[#f7f9fb] px-6 py-10 text-center transition hover:border-[#d9a400] hover:bg-[#fffbee]"
+                  className="w-full rounded-none border-2 border-dashed border-[#b9c5d2] bg-[#f7f9fb] px-6 py-10 text-center transition hover:border-[#d9a400] hover:bg-[#fffbee]"
                 >
-                  <span className="block text-3xl font-black text-[#d9a400]">
+                  <span className="block text-3xl font-black text-[#a47b16]">
                     +
                   </span>
 
@@ -545,7 +545,7 @@ export default function QuotePage() {
                     {files.map((file, index) => (
                       <div
                         key={`${file.name}-${index}`}
-                        className="flex items-center justify-between gap-4 rounded-lg border border-slate-200 bg-white px-4 py-3"
+                        className="flex items-center justify-between gap-4 rounded-none border border-slate-200 bg-white px-4 py-3"
                       >
                         <div className="min-w-0">
                           <p className="truncate text-sm font-bold">
@@ -561,7 +561,7 @@ export default function QuotePage() {
                           type="button"
                           onClick={() => removeFile(index)}
                           aria-label={`Remove ${file.name}`}
-                          className="shrink-0 rounded-md bg-red-50 px-3 py-2 text-xs font-bold text-red-700 hover:bg-red-100"
+                          className="shrink-0 rounded-none bg-red-50 px-3 py-2 text-xs font-bold text-red-700 hover:bg-red-100"
                         >
                           Remove
                         </button>
@@ -588,7 +588,7 @@ export default function QuotePage() {
               </div>
 
               {!quoteEnabled && (
-                <div className="rounded-lg border border-amber-200 bg-amber-50 p-5 text-sm leading-7 text-amber-950">
+                <div className="rounded-none border border-amber-200 bg-amber-50 p-5 text-sm leading-7 text-amber-950">
                   The online quotation submission service is being configured.
                   You can review the form and select files, but inquiries
                   cannot be submitted until the service is activated.
@@ -599,7 +599,7 @@ export default function QuotePage() {
                 <p
                   role="status"
                   aria-live="polite"
-                  className={`rounded-lg p-4 text-sm font-bold ${
+                  className={`rounded-none p-4 text-sm font-bold ${
                     success
                       ? "bg-green-50 text-green-800"
                       : "bg-red-50 text-red-800"
@@ -612,7 +612,7 @@ export default function QuotePage() {
               <button
                 type="submit"
                 disabled={!quoteEnabled || submitting}
-                className={`w-full rounded-lg bg-[#061e38] px-7 py-4 text-sm font-black text-white ${
+                className={`w-full rounded-none bg-[#263238] px-7 py-4 text-sm font-black text-white ${
                   !quoteEnabled || submitting
                     ? "cursor-not-allowed opacity-60"
                     : "transition hover:bg-[#123a61]"
@@ -633,18 +633,18 @@ export default function QuotePage() {
         </div>
       </section>
 
-      <section className="bg-[#ffc20a] px-6 py-16 md:px-8 md:py-20">
+      <section className="bg-[#f1f2f0] px-6 py-16 md:px-8 md:py-20">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           <div>
-            <p className="mb-3 text-xs font-black tracking-[0.2em] text-[#604800]">
+            <p className="mb-3 text-xs font-black tracking-[0.2em] text-[#6d571e]">
               QUESTIONS BEFORE YOU BEGIN?
             </p>
 
-            <h2 className="text-3xl font-black text-[#061e38] md:text-4xl">
+            <h2 className="text-3xl font-black text-[#252b30] md:text-4xl">
               Connect With Grandeur BuildCrest.
             </h2>
 
-            <p className="mt-4 max-w-2xl leading-7 text-[#25384b]">
+            <p className="mt-4 max-w-2xl leading-7 text-[#5f686e]">
               Have questions about construction services or
               the project inquiry process?
             </p>
@@ -652,14 +652,14 @@ export default function QuotePage() {
 
           <Link
             href="/contact"
-            className="shrink-0 rounded-lg bg-[#061e38] px-8 py-4 text-sm font-black text-white"
+            className="shrink-0 rounded-none bg-[#263238] px-8 py-4 text-sm font-black text-white"
           >
             Contact Us →
           </Link>
         </div>
       </section>
 
-      <footer className="bg-[#001426] px-6 py-8 text-center text-sm text-slate-300">
+      <footer className="bg-[#111b21] px-6 py-8 text-center text-sm text-slate-300">
         © Grandeur BuildCrest Construction Group. All rights reserved.
       </footer>
     </main>
